@@ -12,8 +12,7 @@
   <p>
     I am an ordinary guy that into programming and books.<br>
     I like trying to program anything from web to microcontroller, but not an expert.<br>
-    I currently can speak in Sundanese, Indonesian, English, and Japanese, and learning Arabic.
-
+    I currently can speak in Sundanese, Indonesian, Japanese, and English, and learning Arabic.
   </p>
   <hr class="my-12 border-dotted">
   <h1 class="text-2xl font-black ">History</h1>
@@ -70,10 +69,4 @@
       ]"
     />
   </div>
-
-  <footer class="my-12 py-4 flex flex-row justify-center items-center text-white border-t border-dashed">
-    <hr class="grow border-1 border-gray-700 mx-4">
-    <span>by Muhammad Izzatul Haq | Built with Nuxt.</span>
-    <hr class="grow border-1 border-gray-700 mx-4">
-  </footer>
 </template>
