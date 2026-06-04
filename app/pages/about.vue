@@ -18,7 +18,7 @@
   <h1 class="text-2xl font-black ">History</h1>
 
   <div class="my-12">
-    <Accordion
+    <ListAccordion
       title="2019"
       :list="[
         'Graduated from <strong>SMKN 2 Bandung</strong> (Vocational High School) in Software Engineering major. [May]',
@@ -28,7 +28,7 @@
       ]"
     />
 
-    <Accordion
+    <ListAccordion
       title="2020"
       :list="[
         'Joined <strong>STEM Education Creativity Center of Excellence UPI</strong> as an instructor. [Mar]',
@@ -40,7 +40,7 @@
       <span>・</span>
       <span>・</span>
     </div>
-    <Accordion
+    <ListAccordion
       title="2022"
       :list="[
         'Ended Volunteering at <strong>Tarbiyah Sunnah Learning</strong>. [Feb]',
@@ -48,21 +48,21 @@
         'Started intern at <strong>Direktorat Sistem dan Teknologi Informasi Universitas Pendidikan Indonesia</strong>. [Nov]',
       ]"
     />
-    <Accordion
+    <ListAccordion
       title="2023"
       :list="[
         'Ended intern at <strong>Direktorat Sistem dan Teknologi Informasi Universitas Pendidikan Indonesia</strong> as a Full-Stack Web Developer. [Jan]',
         'Started working part-time at <strong>Suteki Karya Nusantara</strong> as a Front-End Web Programmer. [May--Aug]',
       ]"
     />
-    <Accordion
+    <ListAccordion
       title="2024"
       :list="[
         'Graduated from Universitas Pendidikan Indonesia with a Computer Science bachelor degree. [Jan]',
         'Still continue at <strong>STEM Education Creativity Center of Excellence UPI</strong>',
       ]"
     />
-    <Accordion
+    <ListAccordion
       title="2025"
       :list="[
         'Joined <strong>Tokyo Internship Program</strong> held by <strong>Tokyo Metropolitan Goverment</strong> at <strong>Tokai Business Service Corp.</strong>. [Oct--Dec]',
