@@ -4,5 +4,8 @@
   "about": "Tentang Saya",
   "language": {
     "name": "Bahasa Indonesia"
+  },
+  "projects": {
+    "title": "Projects"
   }
 }

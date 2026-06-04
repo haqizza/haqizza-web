@@ -4,5 +4,8 @@
   "about": "自己紹介",
   "language": {
     "name": "日本語"
+  },
+  "projects": {
+    "title": "プロジェクト"
   }
 }

@@ -4,5 +4,8 @@
   "about": "About",
   "language": {
     "name": "English"
+  },
+  "projects": {
+    "title": "Projects"
   }
 }
