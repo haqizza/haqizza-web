@@ -1,0 +1,1 @@
+type localeCodeType = "ja" | "en" | "id"
