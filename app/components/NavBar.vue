@@ -30,10 +30,13 @@ const changeLanguage = (languageCode) => {
           <Icon name="mdi:github" size="1.35em" class="text-white hover:text-cyan-200" />
         </NuxtLink>
         <NuxtLink to="https://x.com/haqizza_" external class="flex flex-col justify-center">
-          <Icon name="simple-icons:x" size="1.25em" class="text-white hover:text-cyan-200" />
+          <Icon name="simple-icons:x" size="1em" class="text-white hover:text-cyan-200" />
         </NuxtLink>
         <NuxtLink to="https://www.instagram.com/haqizza/" external class="flex flex-col justify-center">
           <Icon name="mdi:instagram" size="1.35em" class="text-white hover:text-cyan-200" />
+        </NuxtLink>
+        <NuxtLink to="https://www.linkedin.com/in/haqizza/" external class="flex flex-col justify-center">
+          <Icon name="mdi:linkedin" size="1.35em" class="text-white hover:text-cyan-200" />
         </NuxtLink>
         <NuxtLink to="mailto:haqizza@gmail.com" external class="flex flex-col justify-center">
           <Icon name="mdi:email" size="1.35em" class="text-white hover:text-cyan-200" />
