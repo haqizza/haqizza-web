@@ -20,5 +20,23 @@ export default defineNuxtConfig({
     ],
     strategy: 'no_prefix',
     defaultLocale: 'en',
+  },
+  content: {
+    build: {
+      markdown: {
+        toc: {
+          depth: 3
+        },
+        highlight: {
+          theme: 'github-dark',
+          langs: [
+            'c',
+            'cpp',
+            'python'
+          ]
+        }
+      }
+    }
   }
+
 })
