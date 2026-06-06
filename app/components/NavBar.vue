@@ -13,7 +13,7 @@ const dropdownRef = ref()
 const changeLanguage = (languageCode) => {
   if(languageCode != locale.value) {
     setLocale(languageCode)
-    dropdownRef.toggleDropdown()
+    dropdownRef.value.toggleDropdown()
   }
 }
 
@@ -80,7 +80,7 @@ const changeLanguage = (languageCode) => {
           v-for="locale in availableLocales"
           :key="locale.code"
           class="cursor-pointer"
-          @click="() => changeLanguage(locale.code)"
+          @click.stop="() => changeLanguage(locale.code)"
         >
           {{ locale.name }}
         </div>
