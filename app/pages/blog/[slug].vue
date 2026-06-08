@@ -25,12 +25,9 @@ const { data: page } = await useAsyncData('page-' + route.path, async () => {
 </script>
 
 <template>
-  <div class="text-center mb-4">
-    <span class="text-lg">{{ $t('blog.title') }}</span>
-    
-  </div>
-  <article v-if="page" class="max-w-3/4 m-auto prose dark:prose-invert prose-h1:text-center">
-    <ContentRenderer :value="page" :prose="true" class=""/>
+  <div class="max-w-[50%] mx-auto mb-4 text-center text-lg">{{ $t('blog.title') }}</div>
+  <article v-if="page" class="max-w-[50%] m-auto prose dark:prose-invert prose-h1:text-center">
+    <ContentRenderer :value="page" :prose="true" :data="{ tags: page.tags }"/>
   </article>
   <div v-else class="text-center">
     <h1 class="text-2xl font-bold">Page not found</h1>

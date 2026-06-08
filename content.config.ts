@@ -1,6 +1,12 @@
-import { defineCollection, defineContentConfig, z } from '@nuxt/content'
+import { defineCollection, defineContentConfig, property, z } from '@nuxt/content'
 
-const commonSchema = z.object({});
+const postSchema = z.object({
+  tags: z.array(z.string()).optional(),
+  category: z.string(),
+  date: z.date(),
+  tagsDisplay: property(z.object({})).inherit('app/components/TagsDisplay.vue'),
+  categoryTag: property(z.object({})).inherit('app/components/CategoryTag.vue')
+});
 
 export default defineContentConfig({
   collections: {
@@ -10,7 +16,7 @@ export default defineContentConfig({
         include: 'en/**',
         prefix: '',
       },
-      schema: commonSchema,
+      schema: postSchema,
     }),
     content_id: defineCollection({
       type: 'page',
@@ -18,7 +24,7 @@ export default defineContentConfig({
         include: 'id/**',
         prefix: '',
       },
-      schema: commonSchema,
+      schema: postSchema,
     }),
     content_ja: defineCollection({
       type: 'page',
@@ -26,7 +32,7 @@ export default defineContentConfig({
         include: 'ja/**',
         prefix: '',
       },
-      schema: commonSchema,
+      schema: postSchema
     }),
   },
 })
