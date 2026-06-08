@@ -20,7 +20,7 @@ const changeLanguage = (languageCode) => {
 </script>
 
 <template>
-  <div class="py-2 width-full flex flex-row justify-between">
+  <div class="py-2 w-full flex flex-row justify-between">
     <div class="mx-4 flex flex-row gap-8 items-center">
       <NuxtLink to="/" class="px-6">
         <NuxtImg class="w-12" src="/logo.png" alt="Tatsuya logo"></NuxtImg>
