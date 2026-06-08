@@ -11,8 +11,6 @@ const props = defineProps({
   imageAlt: String
 })
 
-console.log(props.description == undefined)
-
 </script>
 
 <template>

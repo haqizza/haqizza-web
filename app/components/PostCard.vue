@@ -8,7 +8,6 @@ const props = defineProps({
   displayImageUrl: String
 })
 
-console.log()
 </script>
 
 <template>

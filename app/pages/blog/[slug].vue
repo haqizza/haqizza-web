@@ -11,8 +11,6 @@ const { data: page } = await useAsyncData('page-' + route.path, async () => {
   const collection = ('content_' + locale.value) as keyof Collections
   const content = await queryCollection(collection).path(route.path).first()
 
-  console.log(content)
-
   // Optional: fallback to default locale if content is missing
   if (!content && locale.value !== 'en') {
     return await queryCollection('content_en').path(route.path).first()
