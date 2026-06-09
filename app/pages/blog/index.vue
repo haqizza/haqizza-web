@@ -4,35 +4,56 @@ const route = useRoute()
 
 const { locale } = useI18n()
 
-const { data: posts } = await useAsyncData(route.path, async () => {
-  const collection = ('content_' + locale.value) as keyof Collections
-  const content = await queryCollection(collection)
-    .limit(15)
-    .all()
+const { data: posts } = await useAsyncData(route.path,
+  async () => {
+    const collection = ('content_' + locale.value) as keyof Collections
+    const content = await queryCollection(collection)
+      .limit(15)
+      .all()
 
-  return content
-}, {
-  watch: [locale], // Refetch when locale changes
-})
+    return content
+  }, {
+    watch: [locale], // Refetch when locale changes
+  }
+)
+
+const { data: featuredPost } = await useAsyncData(route.path + - 'featured',
+  async () => {
+    const collection = ('content_' + locale.value) as keyof Collections
+    const content = await queryCollection(collection)
+      .where('featured', '=', true)
+      .first()
+
+    return content
+  }, {
+    watch: [locale], // Refetch when locale changes
+  }
+)
 
 </script>
 
 <template>
-  <div class="my-12 text-center text-2xl font-bold">
-    {{ $t('blog.title') }}
-  </div>
-
-  <div id="Featured">
-
-  </div>
-
-  <div class="px-12 grid grid-cols-3">
-    <PostCard
-      v-for="post in posts"
-      :key="post.path"
-      :title="post.title"
-      :description="post.description"
-      :path="post.path"
-    />
-  </div>
+  <main class="max-w-[70%] mx-auto">
+    <div class="my-12 text-center text-2xl font-bold">
+      {{ $t('blog.title') }}
+    </div>
+  
+    <div v-if="featuredPost" id="Featured" class="mb-12">
+      <FeaturedCard
+        :title="featuredPost.title"
+        :description="featuredPost.description"
+        :path="featuredPost.path"
+      />
+    </div>
+  
+    <div class="grid grid-cols-3 gap-4">
+      <PostCard
+        v-for="post in posts"
+        :key="post.path"
+        :title="post.title"
+        :description="post.description"
+        :path="post.path"
+      />
+    </div>
+  </main  >
 </template>

@@ -4,6 +4,7 @@ const postSchema = z.object({
   tags: z.array(z.string()).optional(),
   category: z.string(),
   date: z.date(),
+  featured: z.boolean().optional(),
   tagsDisplay: property(z.object({})).inherit('app/components/TagsDisplay.vue'),
   categoryTag: property(z.object({})).inherit('app/components/CategoryTag.vue')
 });
