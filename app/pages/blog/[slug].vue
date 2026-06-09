@@ -35,11 +35,18 @@ const { data: surround } = await useAsyncData('surrounding-' + route.path,
     watch: [locale], // Refetch when locale changes
   }
 )
+
+const postDate = computed(() => {
+  let date = null
+  if(page.value) date = new Date(page.value.date).toLocaleDateString()
+  return date
+})
 </script>
 
 <template>
   <div class="max-w-[50%] mx-auto mb-4 text-center text-lg">
-    {{ $t('blog.title') }}
+    {{ $t('blog.title') }}<br>
+    <span class="text-sm text-gray-400">{{ postDate }}</span>
   </div>
   <main v-if="page" class="max-w-[50%] m-auto">
     <article
