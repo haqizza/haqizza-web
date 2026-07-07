@@ -1,18 +1,12 @@
-<script setup>
+<script setup lang="ts"> 
 
-// interface Props{
-//   buttonTitle?: string,
-//   buttonTitleClass?: string,
-//   dropdownItems?: string[],
-//   dropdownItemsClass?: string
-// }
 
-const props = defineProps({
-  buttonTitle: String,
-  buttonTitleClass: String,
-  dropdownItems: Array,
-  dropdownItemsClass: String
-})
+defineProps<{
+  buttonTitle: string,
+  buttonTitleClass: string,
+  dropdownItems: Array<string>,
+  dropdownItemsClass: string
+}>()
 
 const isOpened = ref(false)
 
@@ -26,7 +20,7 @@ defineExpose({ toggleDropdown })
 
 <template>
   <div class="relative" @click="toggleDropdown">
-    {{ props.buttonTitle }}
+    {{ buttonTitle }}
     <slot name="button">
 
     </slot>
@@ -39,9 +33,9 @@ defineExpose({ toggleDropdown })
       "
     >
       <div
-        v-if="props.dropdownItems && props.dropdownItems?.length > 0"
-        v-for="item in props.dropdownItems"
-        :class="props.dropdownItemsClass"
+        v-if="dropdownItems && dropdownItems?.length > 0"
+        v-for="item in dropdownItems"
+        :class="dropdownItemsClass"
       >
         {{ item }}
       </div>
