@@ -34,6 +34,17 @@ const { data: surround } = await useAsyncData('surrounding-' + route.path,
   }
 )
 
+useHead({
+  title: 'Blog:' + page.value?.title,
+  meta: [
+    { name: 'description', content: page.value?.description },
+    { property: 'og:title', content: 'Blog:' + page.value?.title + '| haqizza' },
+    { property: 'og:description', content: page.value?.description },
+  ],
+  htmlAttrs: {
+    lang: locale.value,
+  },
+})
 
 </script>
 

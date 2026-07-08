@@ -2,7 +2,19 @@
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
-
+  app: {
+    head: {
+      title: 'haqizza', // default fallback title
+      htmlAttrs: {
+        lang: 'en',
+      },
+      charset: 'utf-16',
+      viewport: 'width=device-width, initial-scale=1, maximum-scale=1',
+      link: [
+        { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      ],
+    },
+  },
   modules: [
     '@nuxt/eslint',
     '@nuxt/icon',

@@ -1,4 +1,17 @@
 <script setup>
+const { locale } = useI18n()
+
+useHead({
+  title: 'Projects',
+  meta: [
+    { name: 'description', content: 'haqizza\'s projects showcase' },
+    { property: 'og:title', content: 'Projects | haqizza' },
+    { property: 'og:description', content: 'haqizza\'s projects showcase' },
+  ],
+  htmlAttrs: {
+    lang: locale.value,
+  },
+})
 </script>
 
 <template>

@@ -4,6 +4,18 @@ const route = useRoute()
 
 const { locale } = useI18n()
 
+useHead({
+  title: 'Blog',
+  meta: [
+    { name: 'description', content: 'Main page of blog in haqizza web' },
+    { property: 'og:title', content: 'Blog | haqizza' },
+    { property: 'og:description', content: 'Main page of blog in haqizza web' },
+  ],
+  htmlAttrs: {
+    lang: locale.value,
+  },
+})
+
 const { data: posts } = await useAsyncData(route.path,
   async () => {
     const collection = ('content_' + locale.value) as keyof Collections
