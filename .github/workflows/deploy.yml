@@ -31,7 +31,7 @@ jobs:
           username: ${{ secrets.VPS_USERNAME }}
           key: ${{ secrets.VPS_SSH_KEY }}
           source: ".output"
-          target: "/app/haqizza-web"
+          target: "~/app/haqizza-web"
           overwrite: true
 
       - name: Restart PM2 on VPS
@@ -41,5 +41,5 @@ jobs:
           username: ${{ secrets.VPS_USERNAME }}
           key: ${{ secrets.VPS_SSH_KEY }}
           script: |
-            cd /app/haqizza-web
+            cd ~/app/haqizza-web
             pm2 restart 0
