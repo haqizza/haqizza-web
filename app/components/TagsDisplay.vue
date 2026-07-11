@@ -7,6 +7,6 @@ defineProps<{
 
 <template>
   <div>
-    <Tag v-for="tag in tags" text="tag" />
+    <Tag v-for="tag in tags" :text="tag" />
   </div>
 </template>
