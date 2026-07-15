@@ -46,9 +46,13 @@ const { data: featuredPost } = await useAsyncData(route.path + - 'featured',
 
 <template>
   <main class="max-w-[70%] mx-auto">
-    <div class="my-12 text-center text-2xl font-bold">
+    <div class="mt-12 mb-4  text-center text-2xl font-bold">
       {{ $t('blog.title') }}
     </div>
+
+    <p class="text-center mb-8">
+      {{ $t('blog.message')}}
+    </p>
   
     <div v-if="featuredPost" id="Featured" class="mb-12">
       <FeaturedCard

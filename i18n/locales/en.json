@@ -9,6 +9,7 @@
     "title": "Projects"
   },
   "blog": {
-    "title": "Blog"
+    "title": "Blog",
+    "message": "Maybe not all posts are available in this language, please change to another language to see other posts."
   }
 }
