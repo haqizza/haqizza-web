@@ -5,10 +5,10 @@ import { VueElement } from "vue";
 
 defineProps<{
   title: string,
-  description: string,
+  description?: string,
   url: string,
-  displayImageUrl: string,
-  imageAlt: string
+  displayImageUrl?: string,
+  imageAlt?: string
 }>()
 
 </script>
@@ -26,7 +26,7 @@ defineProps<{
     </div>
     <NuxtImg
       v-if="displayImageUrl"
-      class="w-full h-auto justify-self-end"
+      class="w-auto h-full justify-self-end"
       :src="displayImageUrl"
       :alt="imageAlt"
     />

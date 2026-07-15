@@ -2,10 +2,10 @@
 
 
 defineProps<{
-  buttonTitle: string,
-  buttonTitleClass: string,
-  dropdownItems: Array<string>,
-  dropdownItemsClass: string
+  buttonTitle?: string,
+  buttonTitleClass?: string,
+  dropdownItems?: Array<string>,
+  dropdownItemsClass?: string
 }>()
 
 const isOpened = ref(false)

@@ -5,7 +5,7 @@ defineProps<{
   title: string,
   description: string,
   path: string,
-  displayImageUrl: string
+  displayImageUrl?: string
 }>()
 
 </script>
